@@ -1,3 +1,8 @@
 body {
   background: #e6ecfe;
 }
+.h1 {
+  text-align: center;
+  color: brown;
+  font-size: 800px;
+}

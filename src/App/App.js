@@ -1,9 +1,10 @@
 import "./App.css";
+import AsideBar from "./components/AsideBar";
 
 export function App() {
   return (
     <div className="App">
-      <div className="nav"></div>
+      <AsideBar />
     </div>
   );
 }
