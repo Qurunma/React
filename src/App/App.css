@@ -1,0 +1,10 @@
+body {
+  background: #e6ecfe;
+  height: 1080px;
+  width: 1920px;
+}
+.h1 {
+  text-align: center;
+  color: brown;
+  font-size: 800px;
+}

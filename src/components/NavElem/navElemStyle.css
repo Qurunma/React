@@ -1,0 +1,35 @@
+.navElem {
+  height: 40px;
+  display: flex;
+  margin-left: -3px;
+  padding-bottom: 35px;
+  
+}
+.nav-im{
+  padding-left: 1px;
+  margin-top: 9px;
+  width: 24px;
+  height: 24px;
+}
+.text-nav{
+  padding-left: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #707C97;
+}
+.selected{
+  position: absolute;
+  left: 0px;
+  height: 40px;
+  width: 3px;
+}
+.log-out{
+  padding-top: 260px;
+}

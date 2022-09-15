@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+aside{
+  background: #FFFFFF; 
+  width: 290px;
+  height: 1080px;
+}
