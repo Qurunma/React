@@ -5,3 +5,8 @@ a {
   text-decoration: none;
   color: #000;
 }
+aside {
+  background: #ffffff;
+  width: 290px;
+  height: 1080px;
+}
