@@ -1,4 +1,48 @@
 .navElem {
-  display: inline-block;
-  vertical-align: middle;
+  height: 40px;
+  display: flex;
+  margin-left: -3px;
+  margin-top: 35px;
+}
+.nav-im {
+  padding-left: 1px;
+  margin-top: 9px;
+  width: 24px;
+  height: 24px;
+}
+.text-nav {
+  padding-left: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.log-out {
+  position: fixed;
+  top: 95%;
+}
+.selected {
+  color: #2a8bf2;
+}
+.selected::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: -50%;
+
+  width: 4px;
+  height: 40px;
+  background-color: #2a8bf2;
+  border: #2a8bf2 solid 0.5px;
+  border-radius: 3px;
+  box-shadow: 1px 0px 10px rgba(42, 139, 242, 0.45),
+    0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75);
+
+  transform: translateY(50%);
 }

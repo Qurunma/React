@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./navElemStyle.css";
 
-function NavElem({ href, label, img, className }) {
+function NavElem({ href, label, img }) {
   return (
-    <Link to={href} className={className}>
-      <img src={img} alt="iconMenu" />
-      <span>{label}</span>
-    </Link>
+    <NavLink
+      to={href}
+      className={({ isActive }) => (isActive ? `navElem selected` : `navElem`)}
+    >
+      <img className="nav-im" src={img} alt="iconMenu" />
+      <span className="text-nav">{label}</span>
+    </NavLink>
   );
 }
 

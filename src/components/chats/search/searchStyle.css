@@ -1,0 +1,21 @@
+.div-search {
+  position: relative;
+  left: -4%;
+  display: flex;
+  align-items: center;
+}
+.div-search input {
+  width: 485px;
+  height: 70px;
+
+  padding: 0 42px;
+
+  background: #ffffff;
+  border-radius: 6px;
+  border: #ffffff solid 0px;
+  outline: none;
+}
+.div-search img {
+  position: relative;
+  left: 7%;
+}

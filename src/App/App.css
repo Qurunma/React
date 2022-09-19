@@ -1,8 +1,13 @@
 body {
   background: #e6ecfe;
+  width: 100%;
+  margin: 0;
 }
 .h1 {
   text-align: center;
   color: brown;
   font-size: 800px;
+}
+.App {
+  display: flex;
 }

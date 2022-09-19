@@ -1,10 +1,17 @@
 import React from "react";
-import NavElem from "../NavElem/NavElem";
+import NavElem from "../NavElem";
+
+import "./navStyle.css";
 
 const navigation = [
   { href: "/home", label: "home", img: "Home.svg", className: "navElem" },
-  { href: "/chats", label: "chats", img: "Chat.svg", className: "navElem" },
-  { href: "/contacts", label: "home", img: "person.svg", className: "navElem" },
+  { href: "/chats", label: "chat", img: "Chat.svg", className: "navElem" },
+  {
+    href: "/contacts",
+    label: "contact",
+    img: "person.svg",
+    className: "navElem",
+  },
   {
     href: "/notifications",
     label: "notifications",
@@ -25,7 +32,7 @@ const navigation = [
   },
   {
     href: "/logout",
-    label: "logout",
+    label: "log out",
     img: "power.svg",
     className: "navElem log-out",
   },

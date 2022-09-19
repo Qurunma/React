@@ -1,0 +1,32 @@
+.header-chats {
+  display: inline-flex;
+  align-items: center;
+}
+.create-chat-button {
+  margin-left: 246px;
+  width: 240px;
+  height: 60px;
+  background: linear-gradient(92.68deg, #7cb8f7 0%, #2a8bf2 100%);
+  box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15),
+    4px 4px 25px rgba(42, 139, 242, 0.05),
+    10px 6px 25px rgba(42, 139, 242, 0.15);
+  border-radius: 6px;
+  border: #000000 solid 0px;
+  align-items: center;
+  display: flex;
+}
+
+.create-chat-button span {
+  margin-left: 7px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.create-chat-button img {
+  margin-left: 26px;
+}
