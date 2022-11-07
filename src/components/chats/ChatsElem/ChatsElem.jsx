@@ -1,22 +1,37 @@
 import React from "react";
 
-import "./ChatsElemStyle.css";
+import "./chatElemStyle.css";
 
-function ChatElem(
+function ChatsElem({
   photo,
   name,
   isOnline,
   status,
   lastMessage,
   lastMessageText,
-  numberOfNotReaded
-) {
+  numberOfNotReaded,
+}) {
   return (
     <div className="chatElem">
-      <div className="profile-recipient">
-        <img src="" alt="" />
-        <span></span>
+      <div className="recipient-profile">
+        <div className="recipient-header">
+          <div className="resipient-in">
+            {isOnline ? <img className="recipient-online"></img> : undefined}
+            <img src={photo} alt="" />
+            <div className="recipient-info">
+              <span className="recipient-name">{name}</span>
+              <span className="recipient-status">{status}</span>
+            </div>
+          </div>
+          <span className="recipient-lastMessage">{lastMessage}</span>
+        </div>
+        <div className="recipient-body">
+          <span className="recipient-textMessage">{lastMessageText}</span>
+          <span className="recipient-notReaded">{numberOfNotReaded}</span>
+        </div>
       </div>
     </div>
   );
 }
+
+export default ChatsElem;
