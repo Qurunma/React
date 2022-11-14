@@ -2,8 +2,11 @@ import React from "react";
 import Top from "./top";
 import ChatsElem from "./ChatsElem";
 import SearchChat from "./search";
+import { useDispatch } from "react-redux";
 
 import "./chatsStyle.css";
+import { Route, Routes } from "react-router-dom";
+import ChatBar from "../ChatBar";
 
 const array = [
   {
@@ -46,15 +49,19 @@ const array = [
     numberOfNotReaded: 0,
   },
 ];
-
 function ChatsMenu() {
+  useDispatch({ type: "setUsers", payload: array });
   return (
     <div className="chatsMenu">
       <Top></Top>
       <SearchChat></SearchChat>
-      {array.map((element) => {
+      <Routes>
+        <Route path=":id" element={<ChatBar></ChatBar>}></Route>
+      </Routes>
+      {array.map((element, index) => {
         return (
           <ChatsElem
+            index={index}
             photo={element.photo}
             name={element.name}
             isOnline={element.isOnline}
