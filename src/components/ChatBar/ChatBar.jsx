@@ -1,19 +1,21 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import "./ChatBar.css";
+import MesSend from "./MesSend/MesSend";
 
 function ChatBar() {
-  const id = useParams().id;
-  const account = useSelector((Storage) => Storage.Users);
-  console.log(account);
+  const { id_sender } = useParams();
+  const Messages = useSelector((Storage) => Storage.Messages);
+  const Users = useSelector((Storage) => Storage.Users);
+
   return (
     <div className="chat-block">
       <div className="div-res-info">
         <img className="res-photo" src="nika.svg" alt="" />
         <div className="res-info">
-          <span className="res-name">Nika</span>
+          <span className="res-name">{}</span>
           <span className="res-online">Online</span>
         </div>
         <div className="div-more">
@@ -22,20 +24,24 @@ function ChatBar() {
         </div>
       </div>
       <div className="div-chat-message">
-        <div className="message-res">
-          <img className="message-res-photo" src="" alt="" />
-          <div className="message-res">
-            <span className="text-message-res"></span>
-          </div>
-          <img className="message-more-res" src="" alt="" />
-        </div>
-        <div className="message-user">
-          <img className="message-user-photo" src="" alt="" />
-          <div className="message-user">
-            <span className="text-message-user"></span>
-          </div>
-          <img className="message-more-user" src="" alt="" />
-        </div>
+        {Messages.map((element) => {
+          console.log(element);
+          console.log(element.id_sender);
+          console.log(element.id_recipient);
+          console.log(element.text_massage);
+          if (
+            (element.id_sender == id_sender && element.id_recipient == 1) ||
+            (element.id_sender == 1 && element.id_recipient == id_sender)
+          ) {
+            return (
+              <MesSend
+                id_sender={element.id_sender}
+                id_recipient={element.id_recipient}
+                text_message={element.text_massage}
+              ></MesSend>
+            );
+          }
+        })}
       </div>
       <div className="input-message">
         <div className="add-files">
