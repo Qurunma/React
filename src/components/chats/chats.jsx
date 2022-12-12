@@ -59,8 +59,10 @@ function ChatsMenu() {
             name={
               element.id_sender != 1
                 ? arU[element.id_sender - 1]?.name +
+                  " " +
                   arU[element.id_sender - 1]?.surname
                 : arU[element.id_recipient - 1]?.name +
+                  " " +
                   arU[element.id_recipient - 1]?.surname
             }
             lastMessageText={element.text_massage}

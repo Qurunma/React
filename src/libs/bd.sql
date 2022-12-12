@@ -27,13 +27,13 @@ CREATE TABLE `messages` (
   `id_sender` int DEFAULT NULL,
   `id_recipient` int DEFAULT NULL,
   `text_massage` varchar(3000) DEFAULT NULL,
-  `date_message` date DEFAULT NULL,
+  `date_message` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_messages`),
   KEY `px_1_idx` (`id_sender`),
   KEY `px2_idx` (`id_recipient`),
   CONSTRAINT `px2` FOREIGN KEY (`id_recipient`) REFERENCES `users` (`id_users`),
   CONSTRAINT `px_1` FOREIGN KEY (`id_sender`) REFERENCES `users` (`id_users`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
-INSERT INTO `messages` VALUES (1,2,1,'Most of its text is made up from sections 1.10.32–3 of Cicero\'s De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). ','2022-12-11'),(2,3,1,'Voice message','2022-12-11'),(3,4,1,'Cicero famously orated against his political opponent Lucius Sergius Catilina.','2022-12-11'),(4,5,1,'Hello! Finally found the time to write to you) I need your help in creating interactive animations for my mobile application.','2022-12-11'),(5,2,1,'ffefefefefef','2022-12-11');
+INSERT INTO `messages` VALUES (1,2,1,'Most of its text is made up from sections 1.10.32–3 of Cicero\'s De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). ','2022-12-10 21:00:00'),(2,3,1,'Voice message','2022-12-10 21:00:00'),(3,4,1,'Cicero famously orated against his political opponent Lucius Sergius Catilina.','2022-12-10 21:00:00'),(4,5,1,'Hello! Finally found the time to write to you) I need your help in creating interactive animations for my mobile application.','2022-12-10 21:00:00'),(5,2,1,'ffefefefefef','2022-12-10 21:00:00'),(6,1,2,'rerg','2022-12-12 18:15:51'),(7,1,2,'ggrggr','2022-12-12 18:22:56'),(8,1,2,'eefef','2022-12-12 18:25:28'),(9,1,2,'gdggwerg','2022-12-12 18:36:39'),(10,1,2,'rgrgrgrg','2022-12-12 18:38:08'),(11,1,2,'ththththththth','2022-12-12 18:39:23'),(12,1,2,'rrrgrgrg','2022-12-12 18:40:07');
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-11 23:17:28
+-- Dump completed on 2022-12-12 21:46:21

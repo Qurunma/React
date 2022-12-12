@@ -1,10 +1,11 @@
 .chat-block {
-  display: flex;
+  position: absolute;
+  display: block;
   width: 850px;
-  height: 930px;
+  height: 830px;
   background: #ffffff;
-  margin-top: 120px;
-  margin-left: 71px;
+  margin-top: 40px;
+  margin-left: 651px;
 }
 
 .div-res-info {
@@ -12,7 +13,9 @@
   width: 850px;
   height: 110px;
   background: #fafbff;
-  border-radius: 6px 6px 0px 0px;
+  border-bottom: solid;
+  border-bottom-color: rgba(112, 124, 151, 0.1);
+  /* border-bottom-color: rgba(112, 124, 151, 0.1); */
 }
 
 .res-photo {
@@ -27,12 +30,13 @@
   margin-top: 31px;
   margin-left: 20px;
   height: 40px;
-  width: 33px;
+  width: 100px;
   display: grid;
   align-items: center;
 }
 
 .res-name {
+  width: 100px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -40,7 +44,6 @@
   line-height: 21px;
   display: flex;
   align-items: center;
-  text-align: center;
   text-transform: capitalize;
   color: #0d1c2e;
 }
@@ -57,4 +60,51 @@
   text-align: center;
   text-transform: lowercase;
   color: #2a8bf2;
+}
+
+.div-chat-message {
+  display: block;
+  width: 850px;
+  height: fit-content;
+  margin-top: 29px;
+  border-bottom: 6px solid rgba(112, 124, 151, 0.1);
+  background: #ffffff;
+}
+
+.input-message {
+  background: #ffffff;
+  display: flex;
+}
+
+.chat-input {
+  width: 548px;
+  height: 23px;
+  border: 0px;
+  outline: none;
+  margin-left: 113px;
+  margin-top: 24px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  color: rgba(94, 96, 100, 0.5);
+}
+
+.chat-input::placeholder {
+  color: rgba(112, 124, 151, 0.5);
+}
+
+.send {
+  display: flex;
+  margin-left: 50px;
+  border: none;
+  background: #ffffff;
 }

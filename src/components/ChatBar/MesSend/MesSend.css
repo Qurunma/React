@@ -1,0 +1,61 @@
+.message-user {
+  margin-bottom: 15px;
+  display: flex;
+  width: 622px;
+  height: 85px;
+  margin-left: 268px;
+}
+
+.message-res {
+  margin-bottom: 15px;
+  display: flex;
+  width: 622px;
+  height: 85px;
+  margin-left: 53px;
+}
+
+.message-res-t {
+  display: flex;
+  width: 520px;
+  height: 85px;
+  background: linear-gradient(90.54deg, #60a9f6 0%, #2a8bf2 100%);
+  box-shadow: 10px 10px 25px rgba(42, 139, 242, 0.1),
+    15px 15px 35px rgba(42, 139, 242, 0.05),
+    10px 10px 50px rgba(42, 139, 242, 0.1);
+  border-radius: 0px 10px 10px 10px;
+  align-items: center;
+}
+
+.message-user-t {
+  display: flex;
+  width: 520px;
+  height: 85px;
+  background: #ffffff;
+  border: 1px solid rgba(112, 124, 151, 0.25);
+  /* Shadow My Messages */
+
+  box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.05),
+    15px 15px 35px rgba(112, 124, 151, 0.05);
+}
+
+.text-message-res {
+  margin-left: 22px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.text-message-user {
+  margin-left: 22px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #707c97;
+}
